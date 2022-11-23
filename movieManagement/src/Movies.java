@@ -2,14 +2,14 @@ public class Movies
 {
     final private int score;
     final private int views;
-    final private boolean [] categories;
+    final private String categories;
 
-    Movies(int r, int c, int v)
+    Movies(int r, String c, int v)
     {
-        this.categories = new boolean [10];
+        this.categories = "";
         this.score = r;
         this.views = v;
-        this.categories[c-1] = true;
+        this.categories = c;
 
     }
     

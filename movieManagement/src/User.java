@@ -2,25 +2,36 @@ public class User
 {
     //Constructor
     private int userIndex;
-    private boolean [] personalities;
-    private int [] ratings;
+    private String name;
 
-    User(int i)
+    User()
+    {
+
+    }
+    User(int i, String n)
     {
         this.userIndex = i;
-        this.personalities = new boolean[50];
-        this.ratings = new int[500];
+        this.name = n;
     }
 
-    boolean [] getUserPersonalities()
+    public String getUserName()
     {
-        return this.personalities;
+        return this.name;
     }
 
-    int [] getUserRatings()
+    public int getUserIndex()
     {
-        return this.ratings;
+        return this.userIndex;
     }
 
+    public void setUserIndex(int i)
+    {
+        this.userIndex = i;
+    }
+    
+    public void setUserName(String n)
+    {
+        this.name = n;
+    }
     
 }
