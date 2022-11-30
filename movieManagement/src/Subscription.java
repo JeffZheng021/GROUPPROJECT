@@ -1,26 +1,38 @@
+
 public class Subscription 
 {
     private double monthlyPrice;
-    private String plan;
+    private String plan; //basic, standard, and premium
     private int availableDownloads;
     private int supportedDevices;
-    private int numberOfSubs;
-
+    private static int numberOfSubs;
+    
+    @Override
+    public String toString()
+    {
+    	return "Plan: "+plan+", Price: "+monthlyPrice+", Available Downloads: "+availableDownloads+", Supported Devices: "+supportedDevices;
+    }
     Subscription()
     {
-        this.plan = "free";
+        this.plan = "basic";
         this.monthlyPrice = 0;
         this.availableDownloads = 0;
-        this.supportedDevices = 1;
-        this.numberOfSubs = 5;
+        this.supportedDevices = 0;
+        numberOfSubs ++;
     }
 
-    Subscription(String plan, double price, int downloads, int devices) //throws IllegalArgumentException(needs double checking)
+    Subscription(String plan, double price, int downloads, int devices) throws InvalidCombinationException
     {
+    	if(!((plan=="basic" && price==10 && downloads==1 && devices==1)||(plan=="standard" && price==15 && downloads==2 && devices==2)
+    	||(plan=="premium" && price==20 && downloads==4 && devices==4) ))
+    	{
+    		throw new InvalidCombinationException();
+    	}
         this.plan = plan;
         this.monthlyPrice = price;
         this.availableDownloads = downloads;
         this.supportedDevices = devices;
+        numberOfSubs++;
 
     }
 
@@ -32,6 +44,11 @@ public class Subscription
     public double getAnnualPrice()
     {
         return (this.monthlyPrice * 12);
+    }
+    
+    public int getNumberOfSubs()
+    {
+    	return numberOfSubs;
     }
     
     public String getPlan()
@@ -55,44 +72,33 @@ public class Subscription
         this.monthlyPrice = 0;
     }
 
-    private void setMonthlyPrice()
+    private void setMonthlyPrice(double price)
     {
-        this.monthlyPrice = 15.99;
+        this.monthlyPrice = price;
     }
 
-    private void setPlan()
+    private void setPlan(String plan)
     {
-        if(this.monthlyPrice == 0)
-        {
-            this.plan = "free";
-        }
-        else
-        {
-            this.plan = "paid";
-        }
+        this.plan=plan;
     }
 
-    private void setAvailableDownloads()
+    private void setAvailableDownloads(int downloads)
     {
-        if (this.plan == "free")
-        {
-            this.availableDownloads = 0;
-        }
-        else
-        {
-            this.availableDownloads = 5;
-        }
+        
+    	this.availableDownloads = downloads;
+        
     }
 
-     private void setSupportedDevice()
+     private void setSupportedDevice(int devices)
      {
-        if(this.plan == "free")
-        {
-            this.supportedDevices = 1;
-        }
-        else
-        {
-            this.supportedDevices = 3;
-        }
+        this.supportedDevices=devices;
      }
+}
+
+class InvalidCombinationException extends Exception
+{
+	public InvalidCombinationException()
+	{
+		super("This is not a valid plan combination");
+	}
 }
