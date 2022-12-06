@@ -1,4 +1,7 @@
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Subscription 
 {
     private double monthlyPrice;
@@ -7,11 +10,7 @@ public class Subscription
     private int supportedDevices;
     private static int numberOfSubs;
     
-    @Override
-    public String toString()
-    {
-    	return "Plan: "+plan+", Price: "+monthlyPrice+", Available Downloads: "+availableDownloads+", Supported Devices: "+supportedDevices;
-    }
+    
     Subscription()
     {
         this.plan = "basic";
@@ -21,19 +20,52 @@ public class Subscription
         numberOfSubs ++;
     }
 
-    Subscription(String plan, double price, int downloads, int devices) throws InvalidCombinationException
+    Subscription(String plan) throws InvalidPlanException
     {
-    	if(!((plan=="basic" && price==10 && downloads==1 && devices==1)||(plan=="standard" && price==15 && downloads==2 && devices==2)
-    	||(plan=="premium" && price==20 && downloads==4 && devices==4) ))
+    	if(!((plan=="basic")||(plan=="standard")
+    	||(plan=="premium") ))
     	{
-    		throw new InvalidCombinationException();
+    		throw new InvalidPlanException();
     	}
-        this.plan = plan;
-        this.monthlyPrice = price;
-        this.availableDownloads = downloads;
-        this.supportedDevices = devices;
-        numberOfSubs++;
+    	
+    	else
+    	{
+	    	if(plan.equals("basic"))
+	    	{
+	    		this.plan = "basic";
+	            this.monthlyPrice = 10;
+	            this.availableDownloads = 1;
+	            this.supportedDevices = 1;
+	            numberOfSubs++;
+	    	}
+	    	
+	    	else if(plan.equals("standard"))
+	    	{
+	    		this.plan = "standard";
+	            this.monthlyPrice = 15;
+	            this.availableDownloads = 2;
+	            this.supportedDevices = 2;
+	            numberOfSubs++;
+	    	}
+	    	
+	    	else if(plan.equals("premium"))
+	    	{
+	    		this.plan = "premium";
+	            this.monthlyPrice = 20;
+	            this.availableDownloads = 4;
+	            this.supportedDevices = 4;
+	            numberOfSubs++;
+	    	}
+    	}
+     
 
+    }
+   
+    
+    @Override
+    public String toString()
+    {
+    	return "Plan: "+plan+", Price: "+monthlyPrice+", Available Downloads: "+availableDownloads+", Supported Devices: "+supportedDevices;
     }
 
     public double getMonthlyPrice()
@@ -93,11 +125,24 @@ public class Subscription
      {
         this.supportedDevices=devices;
      }
+     
+     public void storeUserData()
+     {
+    	 try
+    	 {
+    	 FileWriter writer = new FileWriter("user_data.txt", true);
+    	 writer.append("");
+    	 }
+    	 catch(IOException e)
+    	 {
+    		 e.printStackTrace();
+    	 }
+     }
 }
 
-class InvalidCombinationException extends Exception
+class InvalidPlanException extends Exception
 {
-	public InvalidCombinationException()
+	public InvalidPlanException()
 	{
 		super("This is not a valid plan combination");
 	}
