@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="294.0" prefWidth="370.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="application.SwitchWindows">
+<AnchorPane prefHeight="294.0" prefWidth="370.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="application.WelcomePageController">
    <children>
       <AnchorPane layoutX="-133.0" layoutY="-192.0" prefHeight="200.0" prefWidth="200.0" />
       <Label layoutX="137.0" layoutY="104.0" text="WELCOME">
