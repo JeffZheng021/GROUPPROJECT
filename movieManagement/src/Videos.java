@@ -1,8 +1,14 @@
-public abstract class Videos 
+public class Videos 
 {
-    abstract String link;
-    abstract void play();
-    abstract String getinfo(); 
+    String link;
+    void play()
+    {
+        //just need to figure out how to write this part
+    }
+    String getinfo()
+    {
+        return link;
+    }
 
 
 
