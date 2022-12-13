@@ -10,7 +10,7 @@ import javafx.beans.*;
 import javafx.stage.Stage;
 
 
-public class NetflixManagementSystem extends Application {
+public class OptionPage extends Application {
 	
 	Button userButton, tvButton, movieButton;
 	Scene choiceScene, userScene, tvScene, movieScene;
