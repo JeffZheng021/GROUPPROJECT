@@ -1,20 +1,20 @@
-Planet Earth II,Documentary,2016,6,9.5
-Breaking Bad,Drama/Crime,2008,62,9.5
-Planet Earth,Documentary,2006,11,9.4
-Band of Brothers,Drama/History,2001,10,9.4
-Chernobyl,Drama/History,2019,5,9.4
-The Wire,Drama/Crime,2002,60,9.3
-Blue Planet II,Documentary,2017,8,9.3
 Avatar: The Last Airbender,Action/Animation,2005,62,9.3
-Cosmos: A Spacetime Odyssey,Documentary,2014,13,9.3
-The Sopranos,Drama/Crime,1999,86,9.2
+Band of Brothers,Drama/History,2001,10,9.4
+Blue Planet II,Documentary,2017,8,9.3
+Breaking Bad,Drama/Crime,2008,62,9.5
+Chernobyl,Drama/History,2019,5,9.4
 Cosmos,Documentary,1980,13,9.3
-Our Planet,Documentary,2019,8,9.3
-Game of Thrones,Action/Fantasy,2011,73,9.2
-Rick and Morty,Comedy/Animation,2013,61,9.1
-The World at War,Documentary/History,1973,23,9.2
+Cosmos: A Spacetime Odyssey,Documentary,2014,13,9.3
 Fullmetal Alchemist: Brotherhood,Action/Animation,2019,68,9.1
-The Last Dance,Documentary/Sport,2020,10,9.1
+Game of Thrones,Action/Fantasy,2011,73,9.2
 Life,Documentary,2009,11,9.1
+Our Planet,Documentary,2019,8,9.3
+Planet Earth,Documentary,2006,11,9.4
+Planet Earth II,Documentary,2016,6,9.5
+Rick and Morty,Comedy/Animation,2013,61,9.1
 Sherlock,Drama/Crime,2010,15,9.1
+The Last Dance,Documentary/Sport,2020,10,9.1
+The Sopranos,Drama/Crime,1999,86,9.2
 The Twilight Zone,Drama/Mystery,1959,156,9.1
+The Wire,Drama/Crime,2002,60,9.3
+The World at War,Documentary/History,1973,23,9.2
