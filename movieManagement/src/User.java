@@ -1,31 +1,41 @@
+package application;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class User 
 {
-    //Constructor
-    private int userIndex;
+    //fields
+
     private String name;
     private String password;
-    private Subscription subsription;
+    private String email;
+    private String plan;
+    private Subscription sub;
 
     
     
- 
+    //constructors
+    
     User()
     {
 
     }
-    User(int userIndex, String name, String password, String plan)
+    
+    User(String name, String password, String email, String plan, boolean writeData)
     {
-        this.userIndex = userIndex;
+
         this.name = name;
+        this.email = email;
         this.password=password;
         
         try
         {
-        this.subsription= new Subscription(plan);
-        storeUserData();
+	        this.sub= new Subscription(plan);
+	        if(writeData = true)
+	        {
+	        	storeUserData();
+	        }
         }
         catch(InvalidPlanException e)
         {
@@ -35,29 +45,48 @@ public class User
         
     }
     
-
+    User(String name, String password, String email, String plan)
+    {
+    	this.name = name;
+        this.email = email;
+        this.password=password;
+        this.plan = plan;
+    	
+    }
     
-    public String getUserName()
+
+    //getters
+    public String getName()
     {
         return this.name;
     }
-
-    public int getUserIndex()
+    
+    public String getPlan()
     {
-        return this.userIndex;
+    	return this.plan;
     }
-
-    public void setUserIndex(int userIndex)
+    
+    public String getEmail()
     {
-        this.userIndex = userIndex;
+    	return this.email;
     }
+    
+    public String getPassword()
+    {
+    	return this.password;
+    }
+    
+    
+
+
+
     
     public void storeUserData()
     {
    	 try
    	 {
    	 FileWriter writer = new FileWriter("user_data.txt", true);
-   	 writer.append("\n"+this.userIndex+", "+this.name+", "+this.password+", "+this.subsription.getPlan());
+   	 writer.append(this.name+","+this.password+","+this.email+","+this.plan+"\n");
    	 writer.close();
    	 }
    	 catch(IOException e)
@@ -66,9 +95,24 @@ public class User
    	 }
     }
     
-    public void setUserName(String n)
+    public void setName(String name)
     {
-        this.name = n;
+        this.name = name;
+    }
+    
+    public void setPlan(String plan)
+    {
+    	this.plan = plan;
+    }
+    
+    public void setEmail(String email)
+    {
+    	this.email = email;
+    }
+    
+    public void setPassword(String password)
+    {
+    	this.password = password;
     }
     
 }

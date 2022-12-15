@@ -1,5 +1,10 @@
+package application;
+
 import java.io.FileWriter;
 import java.io.IOException;
+
+
+
 
 public class Manager {
 	
@@ -19,7 +24,7 @@ public class Manager {
 		try
 		{
 			FileWriter writer = new FileWriter("manager_data.txt", true);
-			writer.append("\n"+this.id+", "+this.password);
+			writer.append(this.id+","+this.password+"\n");
 			writer.close();
 			
 			
@@ -29,6 +34,14 @@ public class Manager {
 		{
 			e.printStackTrace();
 		}
+	}
+	public static void main (String [] args)
+	{
+		
+		
+
+
+		
 	}
 	
 

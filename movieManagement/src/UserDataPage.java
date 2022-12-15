@@ -1,16 +1,17 @@
 package application;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
-public class LoginPage extends Application {
+public class UserDataPage extends Application{
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/LoginPage.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/UserDataPage.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
@@ -25,4 +26,5 @@ public class LoginPage extends Application {
 		launch(args);
 		
 	}
+
 }

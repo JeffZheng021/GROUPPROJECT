@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class WelcomePageController {
+
 	@FXML
 	private Stage stage;
 	private Scene scene;
@@ -19,7 +20,7 @@ public class WelcomePageController {
 	
 	@FXML
 	public void toLoginPage(ActionEvent event) throws IOException{
-		root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+		root = FXMLLoader.load(getClass().getResource("/LoginPage.fxml"));
 		//Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
