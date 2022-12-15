@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.AmbientLight?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.MeshView?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #483D8B;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectionPageController">
    <children>
-      <Button layoutX="132.0" layoutY="108.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="248.0" layoutY="108.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="393.0" layoutY="108.0" mnemonicParsing="false" text="Button" />
-      <Text layoutX="263.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selection Page" />
+      <Button fx:id="userButton" layoutX="162.0" layoutY="291.0" mnemonicParsing="false" onAction="#toUserDataPage" prefHeight="67.0" prefWidth="238.0" text="User Data" textFill="#6439c1">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Button fx:id="movieButton" layoutX="162.0" layoutY="104.0" mnemonicParsing="false" onAction="#toMovieDataPage" prefHeight="67.0" prefWidth="238.0" text="Movie Data" textFill="#6004e1">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Button fx:id="tvshowButton" layoutX="162.0" layoutY="200.0" mnemonicParsing="false" onAction="#toTvShowDataPage" prefHeight="67.0" prefWidth="238.0" text="TV Show Data" textFill="#6f12bc">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font></Button>
+      <Text fill="#03e1b1" layoutX="218.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font></Text>
+      <Line endX="84.39999389648438" endY="0.5999908447265625" layoutX="426.0" layoutY="137.0" startX="-25.600006103515625" startY="0.5999908447265625" stroke="#004ac9" strokeWidth="5.0" />
+      <Line endX="225.89999389648438" endY="138.60003662109375" layoutX="285.0" layoutY="187.0" startX="225.89999389648438" startY="-48.90000915527344" stroke="#0d6adc" strokeWidth="5.0" />
+      <Line endX="100.0" layoutX="410.0" layoutY="232.0" startX="-9.600006103515625" startY="-1.52587890625E-5" stroke="#294ed4" strokeWidth="5.0" />
+      <Line endX="100.0" layoutX="410.0" layoutY="326.0" startX="-9.600006103515625" stroke="#0e4ddf" strokeWidth="5.0" />
+      <MeshView layoutX="63.0" layoutY="219.0" />
+      <AmbientLight color="CHARTREUSE" layoutX="63.0" layoutY="171.0" lightOn="true" />
    </children>
 </AnchorPane>

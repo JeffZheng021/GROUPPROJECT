@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="294.0" prefWidth="370.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="application.WelcomePageController">
-   <children>
-      <AnchorPane layoutX="-133.0" layoutY="-192.0" prefHeight="200.0" prefWidth="200.0" />
-      <Label layoutX="137.0" layoutY="104.0" text="WELCOME">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Button layoutX="151.0" layoutY="157.0" mnemonicParsing="false" onAction="#toLoginPage" text="LOGIN">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-   </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="600.0" style="-fx-background-color: #483D8B;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WelcomePageController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="220.0" layoutY="228.0" mnemonicParsing="false" onAction="#toLoginPage" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #00BFFF;" text="Enter">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <Text fill="#00d4c6" layoutX="157.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
+               <font>
+                  <Font name="System Bold" size="72.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
