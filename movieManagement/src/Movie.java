@@ -82,7 +82,7 @@ public class Movie {
 	{
 		this.rating=rating;
 	}
-	public void setGentre(String genre)
+	public void setGenre(String genre)
 	{
 		this.genre=genre;
 	}
