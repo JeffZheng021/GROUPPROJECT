@@ -70,5 +70,22 @@ public class Movie {
 		return this.genre;
 	}
 	
+	public void setName(String name)
+	{
+		this.name=name;
+	}
+	public void setYear(int year)
+	{
+		this.year=year;
+	}
+	public void setRating(double rating)
+	{
+		this.rating=rating;
+	}
+	public void setGentre(String genre)
+	{
+		this.genre=genre;
+	}
+	
 }
 

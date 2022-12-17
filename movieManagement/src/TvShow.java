@@ -79,4 +79,25 @@ public class TvShow {
 		return this.episodes;
 	}
 	
+	public void setRating(double rating)
+	{
+		this.rating=rating;
+	}
+	public void setName(String name)
+	{
+		this.name=name;
+	}
+	public void setEpisodes(int episodes)
+	{
+		this.episodes=episodes;
+	}
+	public void setYear(int year)
+	{
+		this.year=year;
+	}
+	public void setGenre(String genre)
+	{
+		this.genre=genre;
+	}
+	
 }
