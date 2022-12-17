@@ -1,7 +1,7 @@
 package application;
 
 import java.io.IOException;
-
+import javax.swing.JOptionPane;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,7 +44,7 @@ public class LogInPageController {
 		}
 		else
 		{
-			System.out.println("login failed");
+			JOptionPane.showMessageDialog(null, "LOGIN FAILED");
 		}
 	}
 
