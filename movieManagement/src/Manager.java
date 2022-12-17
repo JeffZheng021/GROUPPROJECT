@@ -38,15 +38,7 @@ public class Manager {
 			e.printStackTrace();
 		}
 	}
-	//main that will be used to test it
-	public static void main (String [] args)
-	{
-		
-		
 
-
-		
-	}
 	
 
 }
