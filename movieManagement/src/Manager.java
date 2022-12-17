@@ -11,8 +11,8 @@ import java.io.IOException;
 public class Manager {
 	
 	//variables: id(username);password, both stored in string type
-	String id;
-	String password;
+	private String id;
+	private String password;
 	
 	//no-args constructor
 	Manager()
@@ -37,6 +37,23 @@ public class Manager {
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	public String getId()
+	{
+		return this.id;
+	}
+	public String getPassword()
+	{
+		return this.password;
+	}
+	public void setId(String id)
+	{
+		this.id=id;
+	}
+	public void setPassword(String password)
+	{
+		this.password=password;
 	}
 
 	
