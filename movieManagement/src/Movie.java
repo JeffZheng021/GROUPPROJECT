@@ -1,5 +1,5 @@
 package application;
-
+//import all packages that is needed to read file, write and exceptions
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,17 +7,18 @@ import java.util.Scanner;
 
 public class Movie {
 	
-	
+	//variables: year in int, name in string, rating in double, genre in string
 	private int year;
 	private String name;
 	private double rating;
 	private String genre;
 	
-	
+	//no-args constructor
 	Movie()
 	{
 		
 	}
+	//args constructor that will set everything as what it reads
 	Movie(String name, String genre, int year, double rating, boolean writeData)
 	{
 		this.year = year;
@@ -43,7 +44,7 @@ public class Movie {
 		}
 		
 	}
-	
+	//this is a constructor that just sets everything as it is inputed into the args
 	Movie(String name, String genre, Integer year, Double rating)
 	{
 		this.year = year;
@@ -52,6 +53,7 @@ public class Movie {
 		this.genre=genre;
 	}
 	
+	//getters and setters for every variables
 	
 	public String getName()
 	{

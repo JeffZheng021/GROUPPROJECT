@@ -1,5 +1,7 @@
 package application;
 
+
+//import packages to read/write files
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -8,15 +10,16 @@ import java.io.IOException;
 
 public class Manager {
 	
-	
+	//variables: id(username);password, both stored in string type
 	String id;
 	String password;
 	
+	//no-args constructor
 	Manager()
 	{
 		
 	}
-	
+	//two args constructor, it will throw exceptions if it have seen io exception(checked) and the line of the code by printstacktrace()
 	Manager(String id, String password)
 	{
 		this.id = id;
@@ -35,6 +38,7 @@ public class Manager {
 			e.printStackTrace();
 		}
 	}
+	//main that will be used to test it
 	public static void main (String [] args)
 	{
 		

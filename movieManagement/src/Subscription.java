@@ -1,18 +1,19 @@
 package application;
 
-
+//import all needed packages
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class Subscription 
 {
+    //all types of variables: monthlyprice,plan,downloads,devices,number of subcriptions
     private double monthlyPrice;
     private String plan; //basic, standard, and premium
     private int availableDownloads;
     private int supportedDevices;
     private static int numberOfSubs;
     
-    
+    //no-args constructor
     Subscription()
     {
         this.plan = "basic";
@@ -22,6 +23,7 @@ public class Subscription
         numberOfSubs ++;
     }
 
+    //args constructor but it will check for the created invalid plan exception, if it does, it will not run
     Subscription(String plan) throws InvalidPlanException
     {
     	if(!((plan=="basic")||(plan=="standard")
@@ -70,6 +72,7 @@ public class Subscription
     	return "Plan: "+plan+", Price: "+monthlyPrice+", Available Downloads: "+availableDownloads+", Supported Devices: "+supportedDevices;
     }
 
+    //getters and setters
     public double getMonthlyPrice()
     {
         return this.monthlyPrice;
@@ -100,6 +103,7 @@ public class Subscription
         return this.supportedDevices;
     }
 
+    //cancelSubscription method, will initialze everything back to free and 0 dollar per month
     public void cancelSubscription()
     {
         this.plan = "free";
@@ -128,6 +132,7 @@ public class Subscription
         this.supportedDevices=devices;
      }
      
+     //method storeUserData will store all of the ones created in the txt file
      public void storeUserData()
      {
     	 try
@@ -142,6 +147,7 @@ public class Subscription
      }
 }
 
+    //create own exception invalid plan exception
 class InvalidPlanException extends Exception
 {
 	public InvalidPlanException()
