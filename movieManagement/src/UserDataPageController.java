@@ -7,15 +7,23 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 public class UserDataPageController implements Initializable{
 	
-	
+	private Stage stage;
+	private Parent root;
+	private Scene scene;
 	@FXML
 	private TableView<User> table;
 	@FXML
@@ -67,5 +75,22 @@ public class UserDataPageController implements Initializable{
 		
 		table.setItems(list);
 		}
+	public void back(ActionEvent event)
+	{	
+			
+		try {
+			root = FXMLLoader.load(getClass().getResource("/SelectionPage.fxml"));
+			stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			scene = new Scene(root);
+				
+			stage.setScene(scene);
+			stage.show();
+			}
+		catch (IOException e1)
+			{		
+			e1.printStackTrace();
+			}
+				
+	}
 	
 }
